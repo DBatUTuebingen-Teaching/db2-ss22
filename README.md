@@ -5,7 +5,7 @@ Nähere Infos zur Organisation der Übungen findet ihr
 - im [Forum zur Veranstaltung](https://forum-db.informatik.uni-tuebingen.de/c/ss22-db2)
     (allgemeine organisatorische Infos, Termine und inhaltliche Diskussionen zu VL und Übung),
 
-- im [Handout zum Übungsbetrieb](...) mit `git`
+- im [Handout zum Übungsbetrieb](handout-git.pdf) mit `git`
     (Aus- und Abgabe von Übungsblättern)
 
 - sowie auf der [Vorlesungswebsite](https://db.inf.uni-tuebingen.de/teaching/DB2SS2022.html)
