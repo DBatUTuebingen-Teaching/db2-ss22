@@ -15,7 +15,7 @@
 
 
 3. Check your installation.
-  
+
   Once you have completed the installation steps, open a terminal session and make sure that your installation of docker works:
 
   ~~~none
@@ -42,11 +42,11 @@ In order to connect to the database system we do not have to install any package
 
 Running `docker exec -it pg12 psql -U postgres -d postgres` opens a psql session inside the docker container.
 
-To create a new user insert: 
+To create a new user insert:
 ~~~
 CREATE ROLE root SUPERUSER CREATEDB INHERIT LOGIN;
 CREATE DATABASE root;
 \q
 ~~~
 
-You can now use `docker exec -it psql` without the `-U` and `-d` flags.
+You can now use `docker exec -it pg12 psql` without the `-U` and `-d` flags.
