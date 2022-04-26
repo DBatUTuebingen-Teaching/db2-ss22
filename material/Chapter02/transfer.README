@@ -1,7 +1,7 @@
 transfer.c
 
-Measure DRAM memory bandwidth: how long does it take to write 64 GB
-of data into RAM?
+Measure DRAM memory bandwidth: how long does it take to scan 64 GB
+of data in RAM?
 
 Compile via
 

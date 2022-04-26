@@ -18,18 +18,23 @@
 #define SCANSIZE (32 * 1024 * 1024)
 
 /* scan the memory, do pseudo work */
-void scan(int64_t *mem)
+int64_t scan(int64_t *mem)
 {
+  int64_t s = 0;
+
   for (size_t loop = 0; loop < MEMSIZE / SCANSIZE; loop += 1) {
     for (size_t i = 0; i < SCANSIZE / sizeof(int64_t); i += 1) {
-      mem[i] = 42;
+      s += mem[i];
     }
   }
+
+  return s;
 }
 
 int main()
 {
   int64_t *area;
+  int64_t s;
 
   struct timeval t0, t1;
   unsigned long duration;
@@ -39,11 +44,11 @@ int main()
   assert(area);
 
   gettimeofday(&t0, NULL);
-  scan(area);
+  s = scan(area);
   gettimeofday(&t1, NULL);
 
   duration = MICROSECS(t1) - MICROSECS(t0);
-  printf("time: %luμs\n", duration);
+  printf("time: %luμs (result: %lld)\n", duration, s);
 
   return 0;
 }
