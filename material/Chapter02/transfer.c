@@ -7,7 +7,7 @@
 #define MICROSECS(t) (1000000 * (t).tv_sec + (t).tv_usec)
 
 /* overall size of memory to scan (64 GB) */
-#define MEMSIZE (64UL * 1024 * 1024 * 1024)
+#define MEMSIZE (64ULL * 1024 * 1024 * 1024)
 
 /* size of scan area (fits into CPU cache?)
 
@@ -38,6 +38,9 @@ int main()
 
   struct timeval t0, t1;
   unsigned long duration;
+
+  /* make sure that we can represent large memory sizes */
+  assert(sizeof(MEMSIZE) >= 8);
 
   /* allocate scan area */
   area = (int64_t*)malloc(SCANSIZE);
