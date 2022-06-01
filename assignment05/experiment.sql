@@ -20,8 +20,8 @@ BEGIN
     );
 
     -- Look up filenodes of the relation and the index
-    idx_filenode := (select relfilenode from pg_class where relname = 'orders');
-    heap_filenode := (select relfilenode from pg_class where relname = 'orders_idx');
+    idx_filenode := (select relfilenode from pg_class where relname = 'orders_idx');
+    heap_filenode := (select relfilenode from pg_class where relname = 'orders');
 
     FOR i in 1 .. n LOOP
         -- Look up a random key in attribute o_orderkey
