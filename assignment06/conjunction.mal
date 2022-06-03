@@ -1,0 +1,9 @@
+sql := sql.mvc();
+ternary:bat[:oid] := sql.tid(sql, "sys", "ternary");
+a0     :bat[:int] := sql.bind(sql, "sys", "ternary", "a", 0:int);
+b0     :bat[:str] := sql.bind(sql, "sys", "ternary", "b", 0:int);
+c0     :bat[:dbl] := sql.bind(sql, "sys", "ternary", "c", 0:int);
+
+# Your code here!
+
+io.print(...);
